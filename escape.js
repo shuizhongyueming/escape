@@ -126,9 +126,11 @@
                 throw '关键词列表不是数组';
             }
 
-            if (node !== null) {
-                return;
-            }
+            // 去掉对node是否为null的判断，使得可以重复init
+            // 这样线上可以热更新敏感词
+            // if (node !== null) {
+            //     return;
+            // }
 
             node = {};
             node.isEnd = false;
